@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Pos x:
+  = @floor.pos_x
+%p
+  %b Pos y:
+  = @floor.pos_y
+%p
+  %b Tags:
+  = @floor.tags
+%p
+  %b Information:
+  = @floor.information
+
+= link_to 'Edit', edit_floor_path(@floor)
+\|
+= link_to 'Back', floors_path

@@ -1,0 +1,15 @@
+class CreateWorkers < ActiveRecord::Migration[5.0]
+  def change
+    create_table :workers do |t|
+      t.text :post, :null => false
+      t.string :phone
+      t.text :first_name, :null => false
+      t.text :second_name
+      t.text :last_name, :null => false
+      t.string :mail, :null => false
+      t.text :duty, :null => false
+
+      t.timestamps
+    end
+  end
+end

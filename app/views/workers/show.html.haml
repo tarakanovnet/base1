@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Post:
+  = @worker.post
+%p
+  %b Phone:
+  = @worker.phone
+%p
+  %b First name:
+  = @worker.first_name
+%p
+  %b Second name:
+  = @worker.second_name
+%p
+  %b Last name:
+  = @worker.last_name
+%p
+  %b Mail:
+  = @worker.mail
+%p
+  %b Duty:
+  = @worker.duty
+
+= link_to 'Edit', edit_worker_path(@worker)
+\|
+= link_to 'Back', workers_path

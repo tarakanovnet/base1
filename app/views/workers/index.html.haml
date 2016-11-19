@@ -1,0 +1,33 @@
+%h1 Listing workers
+
+%table
+  %thead
+    %tr
+      %th Post
+      %th Phone
+      %th First name
+      %th Second name
+      %th Last name
+      %th Mail
+      %th Duty
+      %th
+      %th
+      %th
+
+  %tbody
+    - @workers.each do |worker|
+      %tr
+        %td= worker.post
+        %td= worker.phone
+        %td= worker.first_name
+        %td= worker.second_name
+        %td= worker.last_name
+        %td= worker.mail
+        %td= worker.duty
+        %td= link_to 'Show', worker
+        %td= link_to 'Edit', edit_worker_path(worker)
+        %td= link_to 'Destroy', worker, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Worker', new_worker_path
