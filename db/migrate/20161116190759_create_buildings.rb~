@@ -1,8 +1,8 @@
 class CreateBuildings < ActiveRecord::Migration[5.0]
   def change
     create_table :buildings do |t|
-      t.float :pos_x, null: false
-      t.float :pos_y, null: false
+      t.float :pos_x, :null => false
+      t.float :pos_y, :null => false
       t.text :tags, array: true, default: []
       t.text :information
 

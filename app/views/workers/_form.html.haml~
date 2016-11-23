@@ -27,8 +27,5 @@
   .field
     = f.label :duty
     = f.text_area :duty
-  .field
-    = f.label :avatar
-    = f.text_area :avatar
   .actions
     = f.submit 'Save'

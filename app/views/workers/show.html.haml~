@@ -23,8 +23,9 @@
   = @worker.duty
 %p
   %b Avatar:
-  = image_tag @worker.avatar.url
- 
+  = @worker.avatar.url
+  = @worker.avatar.url(:medium)
+  = @worker.avatar.url(:thumb)
 
 
 = link_to 'Edit', edit_worker_path(@worker)
