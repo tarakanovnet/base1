@@ -15,7 +15,7 @@
 //= require turbolinks
 //= require maskedinput
 //= require bootstrap
-//= require jquery.bootstrap-growl
+//= require jquery.bootstrapgrowl
 //= require moment
 //= require bootstrap-datetimepicker
 //= require moment/ru

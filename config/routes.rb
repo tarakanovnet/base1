@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :role_users
+  resources :roles
   resources :workers
   resources :rooms
   resources :floors
