@@ -1,0 +1,7 @@
+class WelcomeController < ApplicationController
+  def index
+  end
+
+  def insufficient_privileges
+  end
+end

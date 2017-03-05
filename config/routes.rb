@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  get 'welcome/insufficient_privileges'
+
   resources :role_users
   resources :roles
   get 'welcome/index', as: :index 

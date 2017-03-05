@@ -1,0 +1,2 @@
+%h1 Welcome#insufficient_privileges
+%p Find me in app/views/welcome/insufficient_privileges.html.haml

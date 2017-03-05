@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161116191522) do
+ActiveRecord::Schema.define(version: 20170121132522) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,24 @@ ActiveRecord::Schema.define(version: 20161116191522) do
     t.text     "information"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "role_users", force: :cascade do |t|
+    t.integer  "role_id"
+    t.integer  "user_id"
+    t.text     "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["role_id"], name: "index_role_users_on_role_id", using: :btree
+    t.index ["user_id"], name: "index_role_users_on_user_id", using: :btree
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.text     "name"
+    t.text     "shortname"
+    t.text     "englishname"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -83,4 +101,6 @@ ActiveRecord::Schema.define(version: 20161116191522) do
     t.datetime "avatar_updated_at"
   end
 
+  add_foreign_key "role_users", "roles"
+  add_foreign_key "role_users", "users"
 end
