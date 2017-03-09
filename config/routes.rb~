@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  get 'welcome/insufficient_privileges'
+
   resources :role_users
   resources :roles
   get 'welcome/index', as: :index 
@@ -9,7 +13,7 @@ Rails.application.routes.draw do
   resources :floors
   resources :buildings
   resources :territories
-  root :to => 'users#index'
+  root :to => 'welcome#index'
   resources :user_sessions
   resources :users do
     member do
