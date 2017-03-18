@@ -18,7 +18,9 @@ module SideBarHelper
       :action => :index,  :icon => 'file-text-o',
        :class => 'long' },
     ]} 
-    result
+    result << {
+      :name => '123',
+      :icon => 'key'}
   end
   
   def is_open?(ctr, act)
