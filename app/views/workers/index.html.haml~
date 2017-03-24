@@ -1,0 +1,33 @@
+%h1 Сотрудники
+
+%table
+  %thead
+    %tr
+      %th Имя
+      %th Фамилия
+      %th Отчество
+      %th Должность
+      %th Телефон
+      %th Почта
+      %th Обязанности
+      %th
+      %th
+      %th
+
+  %tbody
+    - @workers.each do |worker|
+      %tr
+        %td= worker.first_name
+        %td= worker.second_name
+        %td= worker.last_name
+        %td= worker.post
+        %td= worker.phone
+        %td= worker.mail
+        %td= worker.duty
+        %td= link_to 'Show', worker
+        %td= link_to 'Edit', edit_worker_path(worker)
+        %td= link_to 'Destroy', worker, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
+
+%br
+
+= link_to 'Новый сотрудник', new_worker_path

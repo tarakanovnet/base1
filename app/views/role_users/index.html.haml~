@@ -1,0 +1,25 @@
+%h1 Список 
+
+%table
+  %thead
+    %tr
+      %th Роль
+      %th Пользователь
+      %th Данные
+      %th
+      %th
+      %th
+
+  %tbody
+    - @role_users.each do |role_user|
+      %tr
+        %td= role_user.role
+        %td= role_user.user
+        %td= role_user.data
+        %td= link_to 'Показать', role_user
+        %td= link_to 'Изменить', edit_role_user_path(role_user)
+        %td= link_to 'Удалить', role_user, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
+
+%br
+
+= link_to 'New Role user', new_role_user_path

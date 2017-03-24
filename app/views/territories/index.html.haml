@@ -1,4 +1,4 @@
-%h1 Listing territories
+%h1 Территория
 
 %table
   %thead
@@ -18,10 +18,10 @@
         %td= territory.pos_y
         %td= territory.tags
         %td= territory.information
-        %td= link_to 'Show', territory
-        %td= link_to 'Edit', edit_territory_path(territory)
-        %td= link_to 'Destroy', territory, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Показать', territory
+        %td= link_to 'Изменить', edit_territory_path(territory)
+        %td= link_to 'Удалить', territory, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
 
 %br
 
-= link_to 'New Territory', new_territory_path
+= link_to 'Новая территория', new_territory_path

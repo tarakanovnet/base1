@@ -1,4 +1,4 @@
-%h1 Listing users
+%h1 Список пользователей
 
 %table
   %thead
@@ -16,10 +16,10 @@
         %td= user.email
         %td= user.crypted_password
         %td= user.salt
-        %td= link_to 'Show', user
-        %td= link_to 'Edit', edit_user_path(user)
-        %td= link_to 'Destroy', user, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Показать', user
+        %td= link_to 'Изменить', edit_user_path(user)
+        %td= link_to 'Удалить', user, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
 
 %br
 
-= link_to 'New User', new_user_path
+= link_to 'Новый пользователь', new_user_path

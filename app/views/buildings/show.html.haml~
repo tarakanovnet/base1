@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Pos x:
+  = @building.pos_x
+%p
+  %b Pos y:
+  = @building.pos_y
+%p
+  %b Tags:
+  = @building.tags
+%p
+  %b Information:
+  = @building.information
+
+= link_to 'Edit', edit_building_path(@building)
+\|
+= link_to 'Back', buildings_path

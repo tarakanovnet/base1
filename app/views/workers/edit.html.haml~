@@ -1,0 +1,7 @@
+%h1 Editing worker
+
+= render 'form'
+
+= link_to 'Показать', @worker
+\|
+= link_to 'Назад', workers_path

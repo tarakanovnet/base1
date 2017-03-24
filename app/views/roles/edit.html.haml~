@@ -1,0 +1,7 @@
+%h1 Editing role
+
+= render 'form'
+
+= link_to 'Показать', @role
+\|
+= link_to 'Назад', roles_path

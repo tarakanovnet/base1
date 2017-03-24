@@ -1,0 +1,7 @@
+%h1 Editing floor
+
+= render 'form'
+
+= link_to 'Показать', @floor
+\|
+= link_to 'Назад', floors_path

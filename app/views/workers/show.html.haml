@@ -1,12 +1,6 @@
 %p#notice= notice
 
 %p
-  %b Post:
-  = @worker.post
-%p
-  %b Phone:
-  = @worker.phone
-%p
   %b First name:
   = @worker.first_name
 %p
@@ -15,6 +9,12 @@
 %p
   %b Last name:
   = @worker.last_name
+%p
+  %b Post:
+  = @worker.post
+%p
+  %b Phone:
+  = @worker.phone
 %p
   %b Mail:
   = @worker.mail
@@ -27,6 +27,6 @@
  
 
 
-= link_to 'Edit', edit_worker_path(@worker)
+= link_to 'Изменить', edit_worker_path(@worker)
 \|
-= link_to 'Back', workers_path
+= link_to 'Назад', workers_path

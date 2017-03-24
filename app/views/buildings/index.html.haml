@@ -1,4 +1,4 @@
-%h1 Listing buildings
+%h1 Строения
 
 %table
   %thead
@@ -18,10 +18,10 @@
         %td= building.pos_y
         %td= building.tags
         %td= building.information
-        %td= link_to 'Show', building
-        %td= link_to 'Edit', edit_building_path(building)
-        %td= link_to 'Destroy', building, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Показать', building
+        %td= link_to 'Изменить', edit_building_path(building)
+        %td= link_to 'Удалить', building, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
 
 %br
 
-= link_to 'New Building', new_building_path
+= link_to 'Новое строение', new_building_path

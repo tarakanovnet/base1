@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Pos x:
+  = @territory.pos_x
+%p
+  %b Pos y:
+  = @territory.pos_y
+%p
+  %b Tags:
+  = @territory.tags
+%p
+  %b Information:
+  = @territory.information
+
+= link_to 'Edit', edit_territory_path(@territory)
+\|
+= link_to 'Back', territories_path

@@ -1,4 +1,4 @@
-%h1 Listing floors
+%h1 Этажи
 
 %table
   %thead
@@ -18,10 +18,10 @@
         %td= floor.pos_y
         %td= floor.tags
         %td= floor.information
-        %td= link_to 'Show', floor
-        %td= link_to 'Edit', edit_floor_path(floor)
-        %td= link_to 'Destroy', floor, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Показать', floor
+        %td= link_to 'Изменить', edit_floor_path(floor)
+        %td= link_to 'Удалить', floor, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
 
 %br
 
-= link_to 'New Floor', new_floor_path
+= link_to 'Новый этаж', new_floor_path

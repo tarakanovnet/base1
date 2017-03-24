@@ -1,0 +1,27 @@
+%h1 Listing floors
+
+%table
+  %thead
+    %tr
+      %th Pos x
+      %th Pos y
+      %th Tags
+      %th Information
+      %th
+      %th
+      %th
+
+  %tbody
+    - @floors.each do |floor|
+      %tr
+        %td= floor.pos_x
+        %td= floor.pos_y
+        %td= floor.tags
+        %td= floor.information
+        %td= link_to 'Показать', floor
+        %td= link_to 'Изменить', edit_floor_path(floor)
+        %td= link_to 'Удалить', floor, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
+
+%br
+
+= link_to 'Новый этаж', new_floor_path

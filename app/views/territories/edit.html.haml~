@@ -1,0 +1,7 @@
+%h1 Editing territory
+
+= render 'form'
+
+= link_to 'Показать', @territory
+\|
+= link_to 'Назад', territories_path

@@ -1,0 +1,7 @@
+%h1 Editing building
+
+= render 'form'
+
+= link_to 'Показать', @building
+\|
+= link_to 'Назад', buildings_path

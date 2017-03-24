@@ -1,15 +1,15 @@
-%h1 Listing workers
+%h1 Сотрудники
 
 %table
   %thead
     %tr
-      %th Post
-      %th Phone
-      %th First name
-      %th Second name
-      %th Last name
-      %th Mail
-      %th Duty
+      %th Имя
+      %th Фамилия
+      %th Отчество
+      %th Должность
+      %th Телефон
+      %th Почта
+      %th Обязанности
       %th
       %th
       %th
@@ -17,17 +17,17 @@
   %tbody
     - @workers.each do |worker|
       %tr
-        %td= worker.post
-        %td= worker.phone
         %td= worker.first_name
         %td= worker.second_name
         %td= worker.last_name
+        %td= worker.post
+        %td= worker.phone
         %td= worker.mail
         %td= worker.duty
-        %td= link_to 'Show', worker
-        %td= link_to 'Edit', edit_worker_path(worker)
-        %td= link_to 'Destroy', worker, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Показать', worker
+        %td= link_to 'Изменить', edit_worker_path(worker)
+        %td= link_to 'Удалить', worker, :method => :delete, :data => { :confirm => 'Вы уверены, что хотите удалить?' }
 
 %br
 
-= link_to 'New Worker', new_worker_path
+= link_to 'Новый сотрудник', new_worker_path
