@@ -3,10 +3,9 @@
 %table
   %thead
     %tr
-      %th Pos x
-      %th Pos y
-      %th Tags
-      %th Information
+      %th Координаты оси X
+      %th Координаты оси Y
+      %th Информация
       %th
       %th
       %th
@@ -16,7 +15,6 @@
       %tr
         %td= building.pos_x
         %td= building.pos_y
-        %td= building.tags
         %td= building.information
         %td= link_to 'Показать', building
         %td= link_to 'Изменить', edit_building_path(building)

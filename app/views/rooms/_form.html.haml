@@ -1,22 +1,24 @@
 = form_for @room do |f|
-  - if @room.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@room.errors.count, "error")} prohibited this room from being saved:"
-      %ul
-        - @room.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :pos_x
-    = f.text_field :pos_x
-  .field
-    = f.label :pos_y
-    = f.text_field :pos_y
-  .field
-    = f.label :tags
-    = f.text_area :tags
-  .field
-    = f.label :information
-    = f.text_area :information
-  .actions
-    = f.submit 'Save'
+  = error_messages_for @room
+  .row
+    .col-md-6
+      .form-group
+        = f.label :pos_x
+        %small
+          (Информация вводится через пробел)
+        = f.text_field :pos_x, class: 'form-control'
+    .col-md-6
+      .form-group
+        = f.label :pos_y
+        %small
+          (Информация вводится через пробел)
+        = f.text_field :pos_y, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.label :information
+        = f.text_field :information, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.submit 'Сохранить', class: 'btn btn-primary'

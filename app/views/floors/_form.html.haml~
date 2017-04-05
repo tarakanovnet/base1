@@ -1,5 +1,5 @@
-= form_for @room do |f|
-  = error_messages_for @territory
+= form_for @floor do |f|
+  = error_messages_for @floor
   .row
     .col-md-6
       .form-group
@@ -21,4 +21,4 @@
   .row
     .col-md-6
       .form-group
-        = f.submit 'Сохранить', class: 'btn btn-primary'
+        = f.submit 'Save', class: 'btn btn-primary'

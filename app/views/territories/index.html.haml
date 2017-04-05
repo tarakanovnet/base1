@@ -3,10 +3,9 @@
 %table
   %thead
     %tr
-      %th Pos x
-      %th Pos y
-      %th Tags
-      %th Information
+      %th Координаты оси X
+      %th Координаты оси Y
+      %th Информация
       %th
       %th
       %th
@@ -16,7 +15,6 @@
       %tr
         %td= territory.pos_x
         %td= territory.pos_y
-        %td= territory.tags
         %td= territory.information
         %td= link_to 'Показать', territory
         %td= link_to 'Изменить', edit_territory_path(territory)

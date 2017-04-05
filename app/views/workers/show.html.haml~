@@ -1,32 +1,32 @@
 %p#notice= notice
 
 %p
-  %b Post:
-  = @worker.post
-%p
-  %b Phone:
-  = @worker.phone
-%p
-  %b First name:
-  = @worker.first_name
-%p
-  %b Second name:
-  = @worker.second_name
-%p
-  %b Last name:
+  %b Фамилия:
   = @worker.last_name
 %p
-  %b Mail:
+  %b Имя:
+  = @worker.first_name
+%p
+  %b Отчество:
+  = @worker.second_name
+%p
+  %b Должность:
+  = @worker.post
+%p
+  %b Телефон:
+  = @worker.phone
+%p
+  %b Почта:
   = @worker.mail
 %p
-  %b Duty:
+  %b Обязанности:
   = @worker.duty
 %p
-  %b Avatar:
+  %b Фотография:
   = image_tag @worker.avatar.url
  
 
 
-= link_to 'Изменить', edit_worker_path(@worker)
+= link_to 'Изменить', edit_worker_path(@worker), class: 'btn btn-primary'
 \|
-= link_to 'Назад', workers_path
+= link_to 'Назад', workers_path, class: 'btn btn-primary'

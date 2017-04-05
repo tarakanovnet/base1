@@ -3,10 +3,9 @@
 %table
   %thead
     %tr
-      %th Pos x
-      %th Pos y
-      %th Tags
-      %th Information
+      %th Координаты оси X
+      %th Координаты оси Y
+      %th Информация
       %th
       %th
       %th
@@ -16,7 +15,6 @@
       %tr
         %td= floor.pos_x
         %td= floor.pos_y
-        %td= floor.tags
         %td= floor.information
         %td= link_to 'Показать', floor
         %td= link_to 'Изменить', edit_floor_path(floor)

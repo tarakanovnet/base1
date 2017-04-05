@@ -3,9 +3,7 @@
 %table
   %thead
     %tr
-      %th Email
-      %th Crypted password
-      %th Salt
+      %th Почта
       %th
       %th
       %th
@@ -14,7 +12,7 @@
     - @users.each do |user|
       %tr
         %td= user.email
-        %td= user.crypted_password
+        -#%td= user.crypted_password
         %td= user.salt
         %td= link_to 'Показать', user
         %td= link_to 'Изменить', edit_user_path(user)

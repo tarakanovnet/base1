@@ -5,10 +5,8 @@
   = @building.pos_x
 %p
   %b Pos y:
-  = @building.pos_y
-%p
-  %b Tags:
-  = @building.tags
+  = @building.pos_y.join(', ')
+
 %p
   %b Information:
   = @building.information

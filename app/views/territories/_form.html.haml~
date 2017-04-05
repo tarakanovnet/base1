@@ -1,5 +1,5 @@
 = form_for @room do |f|
-  = error_messages_for @territory
+  = errors_messages_for @territory
   .row
     .col-md-6
       .form-group

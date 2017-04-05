@@ -1,31 +1,44 @@
 = form_for @worker do |f|
-  - if @worker.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@worker.errors.count, "error")} prohibited this worker from being saved:"
-      %ul
-        - @worker.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :post
-    = f.text_area :post
-  .field
-    = f.label :phone
-    = f.text_field :phone
-  .field
-    = f.label :first_name
-    = f.text_area :first_name
-  .field
-    = f.label :second_name
-    = f.text_area :second_name
-  .field
-    = f.label :last_name
-    = f.text_area :last_name
-  .field
-    = f.label :mail
-    = f.text_field :mail
-  .field
-    = f.label :duty
-    = f.text_area :duty
-  .actions
-    = f.submit 'Save'
+  = error_messages_for @worker
+  .row
+    .col-md-4
+      .form-group
+        = f.label :Фамилия
+        = f.text_area :last_name, class: 'form-control'
+    .col-md-4
+      .form-group
+        = f.label :Имя
+        = f.text_area :first_name, class: 'form-control'
+    .col-md-4
+      .form-group
+        = f.label :Отчество
+        = f.text_area :second_name, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.label :Должность
+        = f.text_area :post, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.label :Телефон
+        = f.text_field :phone, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.label :Почта
+        = f.text_field :mail, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.label :Обязанности
+        = f.text_area :duty, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.label :Аватарка
+        = f.text_area :avatar, class: 'form-control'
+  .row
+    .col-md-6
+      .form-group
+        = f.submit 'Сохранить', class: 'btn btn-primary'

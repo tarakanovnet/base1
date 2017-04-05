@@ -1,4 +1,4 @@
-//@include text-emphasis-variant('.text-purple', $brand-purple)
+@include text-emphasis-variant('.text-purple', $brand-purple)
 
 body
   font-family: 'Open Sans'
@@ -262,4 +262,4 @@ $percents: (90 85 80 75 70 65 60 55 50 40 30 20 10 5)
 .btn-success
   background-color: #dde8ba // фон кнопки
   border-color: #dde8ba // рамка
-  color: #000000 //цвет текста
+  color: #111111 //цвет текста

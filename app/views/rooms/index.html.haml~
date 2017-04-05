@@ -1,11 +1,10 @@
-%h1 Listing rooms
+%h1 Кабинеты
 
 %table
   %thead
     %tr
       %th Pos x
       %th Pos y
-      %th Tags
       %th Information
       %th
       %th
@@ -16,7 +15,6 @@
       %tr
         %td= room.pos_x
         %td= room.pos_y
-        %td= room.tags
         %td= room.information
         %td= link_to 'Показать', room
         %td= link_to 'Изменить', edit_room_path(room)
