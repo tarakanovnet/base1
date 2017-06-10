@@ -2,7 +2,7 @@ $body-bg: #ddffcc
 $navbar-default-bg: #fff
 $navbar-default-link-color: #333
 $navbar-margin-bottom: 0
-$navbar-inverse-bg: #dde8ba // #245e03
+$navbar-inverse-bg: #623321 // #245e03
 $navbar-inverse-link-color: lighten(#333, 90%)
 $navbar-inverse-link-hover-color: #fff
 $navbar-inverse-link-active-color: $navbar-inverse-link-color
@@ -17,7 +17,7 @@ $dropdown-link-active-color: $navbar-inverse-link-color
 $dropdown-link-active-bg: $navbar-inverse-bg
 $dropdown-fallback-border: $navbar-inverse-bg
 
-$navbar-height: 560px
+$navbar-height: 56px
 $font-size-base: 16px
 $border-radius-base: 0
 $border-radius-small: 0

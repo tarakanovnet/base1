@@ -27,7 +27,7 @@ module SideBarHelper
        :icon => 'align-justify'},
       {:name => 'Кабинеты', :controller => :rooms,
        :action => :index,  
-       :icon => 'hetero'},
+       :icon => 'motorcycle'},
       {:name => 'Сотрудники',
        :controller => :workers, :action => :index,
        :icon => 'user'}

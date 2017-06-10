@@ -1,15 +1,32 @@
 %p#notice= notice
 
 %p
-  %b Pos x:
-  = @building.pos_x
+  %b Координата оси X:
+  = @building.pos_x.join(', ')
 %p
-  %b Pos y:
+  %b Координата оси Y:
   = @building.pos_y.join(', ')
 
 %p
-  %b Information:
+  %b Информация:
   = @building.information
+%div{style: 'border: 2px solid black;'}
+  %svg{width: 980, height: 600}
+    */%rect{x: @building.pos_x[0]+80, y: @building.pos_y[0]+80, width: @building.pos_x[6] - @building.pos_x[4], height: @building.pos_y[5] - @building.pos_y[4], style: "fill:blue;stroke:orange;stroke-width:150;fill-opacity:0.1;stroke-opacity:0.9"}
+   
+    %rect{x: @building.pos_x[1], y: @building.pos_y[1], width: @building.pos_x[0] - @building.pos_x[2], height: @building.pos_y[2] - @building.pos_y[1], style: "fill:grey;stroke:blue;fill-opacity:0.4;stroke-width:4"}
+  
+    */%rect{x: @building.pos_x[2]+80, y: @building.pos_y[2]+80, width: @building.pos_x[5] - @building.pos_x[4], height: @building.pos_y[5] - @building.pos_y[4], style: "fill:blue;stroke:lime;stroke-width:150;fill-opacity:0.1;stroke-opacity:0.9"}
+
+    */%polygon{points: "@building.pos_x[0],@building.pos_y[0] @building.pos_x[1],@building.pos_y[1] @building.pos_x[2],@building.pos_y[2] @building.pos_x[3],@building.pos_y[3]", style: "fill:blue;stroke:lime;stroke-width:150;fill-opacity:0.1;stroke-opacity:0.9"}
+   
+    %polygon{points: "400,50 700,50 700,200 600,200 600,150 400,150", style: "fill:grey;stroke:blue;fill-opacity:0.6;stroke-width:4"}
+
+    %polygon{points: "350,450 400,450 400,400 600,400 600,450 650,450 650,550 350,550", style: "fill:grey;stroke:blue;fill-opacity:0.6;stroke-width:4"}
+
+    */%line{x1: @building.pos_x[0], x2: @building.pos_y[3], y1: @building.pos_x[0], y2: @building.pos_y[3], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
+
+   
 
 = link_to 'Изменить', edit_building_path(@building)
 \|

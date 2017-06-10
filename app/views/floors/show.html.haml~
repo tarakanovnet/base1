@@ -1,17 +1,27 @@
 %p#notice= notice
 
 %p
-  %b Pos x:
-  = @floor.pos_x
+  %b Координата оси X:
+  = @floor.pos_x.join(', ')
 %p
-  %b Pos y:
-  = @floor.pos_y
+  %b Координата оси Y:
+  = @floor.pos_y.join(', ')
 %p
-  %b Tags:
-  = @floor.tags
-%p
-  %b Information:
+  %b Информация:
   = @floor.information
+%div{style: 'border: 2px solid black;'}
+  %svg{width: 980, height: 600}
+    %rect{x: @floor.pos_x[0], y: @floor.pos_y[0], width: @floor.pos_x[3] - @floor.pos_x[1], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:pink;stroke:orange;fill-opacity:0.4;stroke-width:4"}
+    %rect{x: @floor.pos_x[0], y: @floor.pos_y[1], width: @floor.pos_x[3] - @floor.pos_x[1], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:pink;stroke:orange;fill-opacity:0.4;stroke-width:4"}
+    %rect{x: @floor.pos_x[0], y: @floor.pos_y[2], width: @floor.pos_x[3] - @floor.pos_x[1], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:pink;stroke:orange;fill-opacity:0.4;stroke-width:4"}
+
+    %text{:fill => "red", :x => "100", :y => "125"} 1 этаж
+    %text{:fill => "red", :x => "100", :y => "275"} 1 этаж
+    %text{:fill => "red", :x => "100", :y => "425"} 1 этаж
+    
+
+*/%rect{x: @building.pos_x[0], y: @building.pos_y[0], width: @building.pos_x[2] - @building.pos_x[0], height: @building.pos_y[1] - @building.pos_y[0], style: "fill:blue;stroke:pink;stroke-width:500;fill-opacity:0.1;stroke-opacity:0.9"}
+
 
 = link_to 'Изменить', edit_floor_path(@floor)
 \|
