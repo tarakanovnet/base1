@@ -1,14 +1,41 @@
 %p#notice= notice
 
 %p
-  %b Pos x:
-  = @room.pos_x
+  %b Координата оси X:
+  = @room.pos_x.join(', ')
 %p
-  %b Pos y:
-  = @room.pos_y
+  %b Координата оси Y:
+  = @room.pos_y.join(', ')
 %p
-  %b Information:
+  %b Информация:
   = @room.information
+
+%div{style: 'border: 2px solid black;'}
+  %svg{width: 1080, height: 600}
+    %rect{x: @room.pos_x[0], y: @room.pos_y[0], width: @room.pos_x[1] - @room.pos_x[0], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.6;stroke-width:3"}
+    %rect{x: @room.pos_x[0], y: @room.pos_y[1], width: @room.pos_x[2] - @room.pos_x[0], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[2], y: @room.pos_y[1], width: @room.pos_x[3] - @room.pos_x[2], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[2], y: @room.pos_y[3], width: @room.pos_x[2] - @room.pos_x[1], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %polygon{points: "50,100 200,100 200,200 150,200 150,150 50,150", style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+
+    %rect{x: @room.pos_x[4], y: @room.pos_y[3], width: @room.pos_x[3] - @room.pos_x[1], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[5], y: @room.pos_y[3], width: @room.pos_x[2] - @room.pos_x[1], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[6], y: @room.pos_y[3], width: @room.pos_x[1] - @room.pos_x[0], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[7], y: @room.pos_y[3], width: @room.pos_x[1] - @room.pos_x[0], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+
+    %rect{x: @room.pos_x[4], y: @room.pos_y[1], width: @room.pos_x[2] - @room.pos_x[1], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[8], y: @room.pos_y[1], width: @room.pos_x[3] - @room.pos_x[2], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[5], y: @room.pos_y[1], width: @room.pos_x[2] - @room.pos_x[9], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[10], y: @room.pos_y[1], width: @room.pos_x[2] - @room.pos_x[9], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+
+    %rect{x: @room.pos_x[11], y: @room.pos_y[2], width: @room.pos_x[3] - @room.pos_x[1], height: @room.pos_y[2] - @room.pos_y[0], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+
+    %rect{x: @room.pos_x[3], y: @room.pos_y[3], width: @room.pos_x[1] - @room.pos_x[0], height: @room.pos_y[4] - @room.pos_y[0], style: "fill:grey;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[11]-100, y: @room.pos_y[3], width: @room.pos_x[1] - @room.pos_x[0], height: @room.pos_y[4] - @room.pos_y[0], style: "fill:grey;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[1], y: @room.pos_y[1]-50, width: @room.pos_x[3] - @room.pos_x[1], height: @room.pos_y[2] - @room.pos_y[1], style: "fill:grey;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[2]+50, y: @room.pos_y[3], width: @room.pos_x[2] - @room.pos_x[1], height: @room.pos_y[1] - @room.pos_y[0], style: "fill:grey;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+    %rect{x: @room.pos_x[4], y: @room.pos_y[1]-50, width: @room.pos_x[5] - @room.pos_x[1], height: @room.pos_y[2] - @room.pos_y[1], style: "fill:grey;stroke:grey;fill-opacity:0.3;stroke-width:3"}
+
 
 = link_to 'Изменить', edit_room_path(@room)
 \|

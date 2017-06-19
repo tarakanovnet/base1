@@ -14,15 +14,49 @@
   %svg{width: 980, height: 600}
     */%rect{x: @building.pos_x[0]+80, y: @building.pos_y[0]+80, width: @building.pos_x[6] - @building.pos_x[4], height: @building.pos_y[5] - @building.pos_y[4], style: "fill:blue;stroke:orange;stroke-width:150;fill-opacity:0.1;stroke-opacity:0.9"}
    
-    %rect{x: @building.pos_x[1], y: @building.pos_y[1], width: @building.pos_x[0] - @building.pos_x[2], height: @building.pos_y[2] - @building.pos_y[1], style: "fill:grey;stroke:blue;fill-opacity:0.4;stroke-width:4"}
+    %rect{x: @building.pos_x[1], y: @building.pos_y[1], width: @building.pos_x[0] - @building.pos_x[2], height: @building.pos_y[6] - @building.pos_y[2], style: "fill:red;stroke:blue;fill-opacity:0.9;stroke-width:4"}
+
+    %rect{x: @building.pos_x[2], y: @building.pos_y[2], width: @building.pos_x[0] - @building.pos_x[6], height: @building.pos_y[6] - @building.pos_y[2], style: "fill:pink;stroke:blue;fill-opacity:0.9;stroke-width:4"}
   
+    %circle{:cx => "430", :cy => "460", :fill => "pink", :r => "60", :stroke => "blue", "stroke-width" => "4"}
+
+    %rect{x: @building.pos_x[5]+40, y: @building.pos_y[3], width: @building.pos_x[0] - @building.pos_x[6]-10, height: @building.pos_y[6] - @building.pos_y[2], style: "fill:pink;stroke:blue;fill-opacity:0.9;stroke-width:4"}
+    
     */%rect{x: @building.pos_x[2]+80, y: @building.pos_y[2]+80, width: @building.pos_x[5] - @building.pos_x[4], height: @building.pos_y[5] - @building.pos_y[4], style: "fill:blue;stroke:lime;stroke-width:150;fill-opacity:0.1;stroke-opacity:0.9"}
 
     */%polygon{points: "@building.pos_x[0],@building.pos_y[0] @building.pos_x[1],@building.pos_y[1] @building.pos_x[2],@building.pos_y[2] @building.pos_x[3],@building.pos_y[3]", style: "fill:blue;stroke:lime;stroke-width:150;fill-opacity:0.1;stroke-opacity:0.9"}
    
-    %polygon{points: "400,50 700,50 700,200 600,200 600,150 400,150", style: "fill:grey;stroke:blue;fill-opacity:0.6;stroke-width:4"}
+    */%polygon{points: "400,50 700,50 700,200 600,200 600,150 400,150", style: "fill:grey;stroke:blue;fill-opacity:0.6;stroke-width:4"}
 
-    %polygon{points: "350,450 450,450 450,400 550,400 550,450 650,450 650,550 350,550", style: "fill:grey;stroke:blue;fill-opacity:0.6;stroke-width:4"}
+    %polygon{points: "450,120 560,120 560,250 470,250 470,220 500,220 500,170 450,170", style: "fill:pink;stroke:blue;fill-opacity:0.9;stroke-width:4"}
+
+    %polygon{points: "380,20 430,50 380,120 330,90", style: "fill:pink;stroke:blue;fill-opacity:0.9;stroke-width:4"}
+
+    */%text{:fill => "black", :x => "180", :y => "450"} 16к1
+    %text{"font-size" => "18", :x => "180", :y => "450"}
+      %tspan{"font-family" => "serif"}
+      16к1
+      %tspan{:dy => "20", "font-family" => "serif", "font-weight" => "900", :x => "10"}
+    */%text{:fill => "black", :x => "320", :y => "330"} 16к2
+    %text{"font-size" => "16", :x => "320", :y => "330"}
+      %tspan{"font-family" => "serif"}
+      16к2
+      %tspan{:dy => "20", "font-family" => "serif", "font-weight" => "900", :x => "10"}
+    */%text{:fill => "black", :x => "510", :y => "200"} 16к3
+    %text{"font-size" => "16", :x => "510", :y => "200"}
+      %tspan{"font-family" => "serif"}
+      16к3
+      %tspan{:dy => "20", "font-family" => "serif", "font-weight" => "900", :x => "10"}
+    */%text{:fill => "black", :x => "510", :y => "400"} 16к4
+    %text{"font-size" => "16", :x => "510", :y => "400"}
+      %tspan{"font-family" => "serif"}
+      16к4
+      %tspan{:dy => "20", "font-family" => "serif", "font-weight" => "900", :x => "10"}
+    */%text{:fill => "black", :x => "370", :y => "70"} 16к5
+    %text{"font-size" => "16", :x => "370", :y => "70"}
+      %tspan{"font-family" => "serif"}
+      16к5
+      %tspan{:dy => "20", "font-family" => "serif", "font-weight" => "900", :x => "10"}
 
     */%line{x1: @building.pos_x[0], x2: @building.pos_y[3], y1: @building.pos_x[0], y2: @building.pos_y[3], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
 

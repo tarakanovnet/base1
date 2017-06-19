@@ -11,16 +11,52 @@
   = @floor.information
 %div{style: 'border: 2px solid black;'}
   %svg{width: 980, height: 600}
-    %rect{x: @floor.pos_x[0], y: @floor.pos_y[0], width: @floor.pos_x[3] - @floor.pos_x[1], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:pink;stroke:orange;fill-opacity:0.4;stroke-width:4"}
-    %rect{x: @floor.pos_x[0], y: @floor.pos_y[1], width: @floor.pos_x[3] - @floor.pos_x[1], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:pink;stroke:orange;fill-opacity:0.4;stroke-width:4"}
-    %rect{x: @floor.pos_x[0], y: @floor.pos_y[2], width: @floor.pos_x[3] - @floor.pos_x[1], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:pink;stroke:orange;fill-opacity:0.4;stroke-width:4"}
+    %rect{x: @floor.pos_x[0], y: @floor.pos_y[0], width: @floor.pos_x[3] - @floor.pos_x[2], height: @floor.pos_y[3] - @floor.pos_y[2], style: "fill:blue;stroke:grey;fill-opacity:0.3;stroke-width:5"}
+    
+    %rect{x: @floor.pos_x[1], y: @floor.pos_y[1], width: @floor.pos_x[3] - @floor.pos_x[4], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:yellow;stroke:red;fill-opacity:0.6;stroke-width:4"}
+    
+    %line{x1: @floor.pos_x[1], x2: @floor.pos_x[5], y1: @floor.pos_y[5], y2: @floor.pos_y[5], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
 
-    %text{:fill => "red", :x => "100", :y => "125"} 1 этаж
-    %text{:fill => "red", :x => "100", :y => "275"} 1 этаж
-    %text{:fill => "red", :x => "100", :y => "425"} 1 этаж
+    %line{x1: @floor.pos_x[1], x2: @floor.pos_x[5], y1: @floor.pos_y[6], y2: @floor.pos_y[6], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
+
+    %line{x1: @floor.pos_x[1], x2: @floor.pos_x[5], y1: @floor.pos_y[7], y2: @floor.pos_y[7], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
+
+    %line{x1: @floor.pos_x[1], x2: @floor.pos_x[5], y1: @floor.pos_y[8], y2: @floor.pos_y[8], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
+
+    %line{x1: @floor.pos_x[1], x2: @floor.pos_x[5], y1: @floor.pos_y[9], y2: @floor.pos_y[9], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
+
+    %line{x1: @floor.pos_x[1], x2: @floor.pos_x[5], y1: @floor.pos_y[10], y2: @floor.pos_y[10], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
+
+    %line{x1: @floor.pos_x[1], x2: @floor.pos_x[5], y1: @floor.pos_y[11], y2: @floor.pos_y[11], style: "stroke:red;stroke-width:2;stroke-opacity:0.9"}
+    %rect{x: @floor.pos_x[1], y: @floor.pos_y[11], width: @floor.pos_x[3] - @floor.pos_x[4], height: @floor.pos_y[1] - @floor.pos_y[0], style: "fill:yellow;stroke:red;fill-opacity:0.7;stroke-width:2"}
+
+    %polygon{points: "720,460 800,460 800,500 720,500", style: "fill:green;stroke:green;fill-opacity:0.5;stroke-width:4"}
+    %text{:fill => "black", :x => "740", :y => "485"} ВХОД
+
+    */%rect{x: @floor.pos_x[0], y: @floor.pos_y[2], width: @floor.pos_x[3] - @floor.pos_x[1], height: @floor.pos_y[2] - @floor.pos_y[1], style: "fill:pink;stroke:orange;fill-opacity:0.4;stroke-width:4"}
+
+    %text{:fill => "black", :x => "300", :y => "80"} ул. Автозаводская, 16к1
+
+    %text{:fill => "blue", :x => "150", :y => "130"} 8 этаж
+    %text{:fill => "blue", :x => "150", :y => "180"} 7 этаж
+    %text{:fill => "blue", :x => "150", :y => "230"} 6 этаж
+    %text{:fill => "blue", :x => "150", :y => "280"} 5 этаж
+    %text{:fill => "blue", :x => "150", :y => "330"} 4 этаж
+    %text{:fill => "blue", :x => "150", :y => "380"} 3 этаж
+    %text{:fill => "blue", :x => "150", :y => "430"} 2 этаж
+    %text{:fill => "blue", :x => "150", :y => "480"} 1 этаж
+
+    %text{:fill => "blue", :x => "320", :y => "130"} 14 аудиторий, 4 подразделения, 31 сотрудник
+    %text{:fill => "blue", :x => "320", :y => "180"} 9 аудиторий, 2 подразделения, 26 сотрудников
+    %text{:fill => "blue", :x => "320", :y => "230"} 10 аудиторий, 2 подразделения, 25 сотрудников
+    %text{:fill => "blue", :x => "320", :y => "280"} 11 аудиторий, 3 подразделения, 29 сотрудников
+    %text{:fill => "blue", :x => "320", :y => "330"} 9 аудиторий, 1 подразделение, 22 сотрудника
+    %text{:fill => "blue", :x => "320", :y => "380"} 12 аудиторий, 2 подразделения, 30 сотрудников
+    %text{:fill => "blue", :x => "320", :y => "430"} 10 аудиторий, 3 подразделения, 24 сотрудника
+    %text{:fill => "blue", :x => "320", :y => "480"} 11 аудиторий, 2 подразделения, 23 сотрудника
     
 
-*/%rect{x: @building.pos_x[0], y: @building.pos_y[0], width: @building.pos_x[2] - @building.pos_x[0], height: @building.pos_y[1] - @building.pos_y[0], style: "fill:blue;stroke:pink;stroke-width:500;fill-opacity:0.1;stroke-opacity:0.9"}
+    */%rect{x: @building.pos_x[0], y: @building.pos_y[0], width: @building.pos_x[2] - @building.pos_x[0], height: @building.pos_y[1] - @building.pos_y[0], style: "fill:blue;stroke:pink;stroke-width:500;fill-opacity:0.1;stroke-opacity:0.9"}
 
 
 = link_to 'Изменить', edit_floor_path(@floor)
